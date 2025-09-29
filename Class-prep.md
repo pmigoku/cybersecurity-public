@@ -33,7 +33,13 @@
     XTRA4-022-M
     XTRA5-022-M
     ```
-6. Obtain the students Jump boxes IP and pass
+6. Student will deploy their opstations
+    Students will navigate to `cvte > aria automation: cyber school > service broker > catalog > CCTC-Security-Opstations` and deploy their own opstations.
+
+    > [!NOTE]
+    > If OS opstations are still present, have students remove them.
+
+7. Obtain the students Jump boxes IP and pass
 
     Students will run:
     ```bash
@@ -44,5 +50,6 @@
     http://127.0.0.1:8888/classinfo.html
     ```
     Student will enter their username `FFLL-XXX-M`
+
     This will show their jump info and remove it from db, make sure they write it down as they will not be able to access it again.
 
