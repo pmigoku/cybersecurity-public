@@ -1,3 +1,6 @@
+- [ ] step
+- [ ]
+
 # Deploy Student Ranges
 Drop a message in the cctc sec-team slack to let them know your deploying a class. 
 
