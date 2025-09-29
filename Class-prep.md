@@ -55,4 +55,6 @@
 
 8. Provide students with CTFd server IP which they will access from their opstations.
 
+    They will login with their `FFL-022-M` Username and thier jumpbox password they pulled from classinfo.html.
+
     `<CLASS_TITLE>-CCTC-Security-Challenge-Instructor`
