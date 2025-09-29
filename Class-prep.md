@@ -28,9 +28,13 @@
 5. Include a couple extra student stacks for backups and demos in the student list (userName.sh will do this automatically)
 
     `XTRA1-022-M`
+
     `XTRA2-022-M`
+
     `XTRA3-022-M`
+
     `XTRA4-022-M`
+
     `XTRA5-022-M`
 
 6. Obtain the students Jump boxes IP and pass
