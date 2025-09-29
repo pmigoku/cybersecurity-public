@@ -57,4 +57,5 @@
 
     They will login with their `FFL-022-M` Username and thier jumpbox password they pulled from classinfo.html.
 
-    `<CLASS_TITLE>-CCTC-Security-Challenge-Instructor`
+> [!NOTE]
+> You can find the IP of the CTFd server from the `<CLASS_TITLE>-CCTC-Security-Challenge-Instructor` deployment
