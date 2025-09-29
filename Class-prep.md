@@ -54,8 +54,9 @@
     This will show their jump info and remove it from db, make sure they write it down as they will not be able to access it again.
 
 8. Provide students with CTFd server IP which they will access from their opstations.
+> [!NOTE]
+> You can find the IP of the CTFd server from the `<CLASS_TITLE>-CCTC-Security-Challenge-Instructor` deployment
+
 
     They will login with their `FFL-022-M` Username and thier jumpbox password they pulled from classinfo.html.
 
-> [!NOTE]
-> You can find the IP of the CTFd server from the `<CLASS_TITLE>-CCTC-Security-Challenge-Instructor` deployment
