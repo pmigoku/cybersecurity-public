@@ -1,8 +1,14 @@
-- [ ] step
-- [ ]
+# Checklist
+- [ ] Message the sec-team slack
+- [ ] Generate username list
+- [ ] Deploy CCTC Security Challenge
+- [ ] Have students deplpoy opstations
+- [ ] Help the students obtain their jump box creds
+- [ ] Provide CTFd server IP
 
 # Deploy Student Ranges
-Drop a message in the cctc sec-team slack to let them know your deploying a class. 
+> [!NOTE]
+> Drop a message in the cctc sec-team slack to let them know your deploying a class.
 
 1. Get a class roster and put first name and last name into a CSV.
     see [students.csv](./students.csv)
