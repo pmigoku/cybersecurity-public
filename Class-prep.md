@@ -11,7 +11,7 @@
     Example: John Basilone would be `JOBA-022-M`.
 
     Copy the output from this script
-    ```bash
+    ```sh
     # The script will prompt you for the class number
     chmod u+x userName.sh
     ./userName.sh students.csv
