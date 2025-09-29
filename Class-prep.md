@@ -67,6 +67,7 @@
 8. Provide students with CTFd server IP which they will access from their opstations.
 > [!NOTE]
 > You can find the IP of the CTFd server from the `<CLASS_TITLE>-CCTC-Security-Challenge-Instructor` deployment
+> The web server is hosted on port `8000`
 
     They will login with their `FFL-022-M` Username and thier jumpbox password they pulled from classinfo.html.
 
