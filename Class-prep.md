@@ -34,9 +34,12 @@
     XTRA5-022-M
     ```
 6. Obtain the students Jump boxes IP and pass
+
     Students will run:
-    `ssh demo1@ip -L 8888:10.208.50.61:80`
-    `http://127.0.0.1:8888/classinfo.html`
-    enter their username `FFLL-XXX-M`
+    ```bash
+    ssh demo1@ip -L 8888:10.208.50.61:80
+    http://127.0.0.1:8888/classinfo.html
+    # Student will enter their username FFLL-XXX-M
+    ```
     This will show their jump info and remove it from db
 
