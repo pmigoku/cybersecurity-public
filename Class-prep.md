@@ -53,3 +53,6 @@
 
     This will show their jump info and remove it from db, make sure they write it down as they will not be able to access it again.
 
+8. Provide students with CTFd server IP which they will access from their opstations.
+
+    `<CLASS_TITLE>-CCTC-Security-Challenge-Instructor`
