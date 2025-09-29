@@ -37,9 +37,12 @@
 
     Students will run:
     ```bash
-    ssh demo1@ip -L 8888:10.208.50.61:80
+    # Create port forward to the webex
+    ssh demo1@10.50.0.161 -L 8888:10.208.50.61:80
+
+    # browse to this site
     http://127.0.0.1:8888/classinfo.html
-    # Student will enter their username FFLL-XXX-M
     ```
-    This will show their jump info and remove it from db
+    Student will enter their username `FFLL-XXX-M`
+    This will show their jump info and remove it from db, make sure they write it down as they will not be able to access it again.
 
