@@ -1,4 +1,6 @@
 # Deploy Student Ranges
+Drop a message in the cctc sec-team slack to let them know your deploying a class. 
+
 1. Get a class roster and put first name and last name into a CSV.
     see [students.csv](./students.csv)
 
