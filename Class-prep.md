@@ -36,8 +36,8 @@
 6. Student will deploy their opstations
     Students will navigate to `cvte > aria automation: cyber school > service broker > catalog > CCTC-Security-Opstations` and deploy their own opstations.
 
-    > [!NOTE]
-    > If OS opstations are still present, have students remove them.
+> [!NOTE]
+> If OS opstations are still present, have students remove them.
 
 7. Obtain the students Jump boxes IP and pass
 
