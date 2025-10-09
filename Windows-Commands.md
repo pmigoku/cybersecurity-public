@@ -1,14 +1,10 @@
 
-# Windows
+# Useful Windows Commands
 
 ## Disable defender
 ```powershell
 Set-MpPreference -DisableRealtimeMonitoring $true -DisableScriptScanning $true -DisableBehaviorMonitoring $true -DisableIOAVProtection $true -DisableIntrusionPreventionSystem $true
 ```
-
-Of course, here are your commands formatted into markdown tables.
-
-### Handy Commands
 
 | Command | Description |
 | :--- | :--- |
