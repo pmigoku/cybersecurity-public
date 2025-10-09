@@ -1,11 +1,11 @@
 
-# Useful Windows Commands
 
 ## Disable defender
 ```powershell
 Set-MpPreference -DisableRealtimeMonitoring $true -DisableScriptScanning $true -DisableBehaviorMonitoring $true -DisableIOAVProtection $true -DisableIntrusionPreventionSystem $true
 ```
 
+## Enumeration Commands
 | Command | Description |
 | :--- | :--- |
 | `xfreerdp /v:<target ip> /u:<user>` | RDP to lab target |
