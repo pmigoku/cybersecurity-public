@@ -1,8 +1,35 @@
 
 
-## Disable defender
+## Lab Stuff
+Disable defender
 ```powershell
 Set-MpPreference -DisableRealtimeMonitoring $true -DisableScriptScanning $true -DisableBehaviorMonitoring $true -DisableIOAVProtection $true -DisableIntrusionPreventionSystem $true
+get-mppreference
+```
+
+Download sysinternals
+```powershell
+Invoke-WebRequest -Uri https://download.sysinternals.com/files/SysinternalsSuite.zip -OutFile SysinternalsSuite.zip; Expand-Archive -Path SysinternalsSuite.zip -DestinationPath Sysinternals; Remove-Item -Path SysinternalsSuite.zip
+```
+
+Download vulnerable putty
+```powershell
+Invoke-WebRequest -uri "https://the.earth.li/~sgtatham/putty/0.67/x86/putty.exe" -outfile c:\users\student\Downloads\putty.exe
+```
+
+```powershell
+# In a PRIVILEGED Windows CMD - Right Click cmd -> runas administrator
+mkdir "C:\Program Files (x86)\Putty"
+move "C:\Users\student\Downloads\putty.exe" "C:\Program Files (x86)\Putty\putty.exe"
+dir "C:\Program Files (x86)\Putty"
+
+# create a vulnerable service
+sc.exe create puttyService binPath='C:\Program Files (x86)\Putty\putty.exe' displayname='puttyService' start= auto
+get-service puttyservice | select *
+
+# make directory writable by all non-admins users
+icacls 'C:\Program Files (x86)\Putty' /grant BUILTIN\Users:W
+icacls 'C:\Program Files (x86)\Putty'
 ```
 
 ## Enumeration Commands
