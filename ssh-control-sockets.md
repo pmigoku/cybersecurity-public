@@ -14,8 +14,8 @@ Fist, establish the initial "master" connection. You can do this with an interac
 # -S specifies the path for the Control Socket file
 ssh -MS /tmp/<SOCKET_NAME> <USER>@<TGT>
 ```
-To create a **master socket** that runs in the background:
-This is useful when you just want to set up the connection for other sessions or port forwards to use, without needing an active terminal.
+
+To create a **master socket** that runs in the background (OPTIONAL): This is useful when you just want to set up the connection for other sessions or port forwards to use, without needing an active terminal.
 ```bash
 # -f forks the process to the background
 # -N tells SSH not to execute a remote command
@@ -63,4 +63,5 @@ ssh -p <PORT> -S /tmp/T1 <USER>@127.0.0.1 -L <LOCAL_PORT>:<TGT_IP>:<DEST_PORT>
 
 # create a new socket through a tunnel for another target
 ssh -p <PORT> -MS /tmp/T2 <USER>@127.0.0.1
+
 ```
