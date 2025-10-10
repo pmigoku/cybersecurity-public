@@ -61,7 +61,8 @@ We can also use master control sockets through existing tunnels!
 # Use an existing control socket to tunnel 
 ssh -p <PORT> -S /tmp/T1 <USER>@127.0.0.1 -L <LOCAL_PORT>:<TGT_IP>:<DEST_PORT>
 
-# create a new socket through a tunnel for another target
+# Create a new Master Connection over an existing tunnel
 ssh -p <PORT> -MS /tmp/T2 <USER>@127.0.0.1
 
 ```
+
