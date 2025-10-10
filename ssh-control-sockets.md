@@ -63,6 +63,31 @@ ssh -p <PORT> -S /tmp/T1 <USER>@127.0.0.1 -L <LOCAL_PORT>:<TGT_IP>:<DEST_PORT>
 
 # Create a new Master Connection over an existing tunnel
 ssh -p <PORT> -MS /tmp/T2 <USER>@127.0.0.1
-
 ```
+
+Here is an example 
+```bash
+#      NIX                  T1                  T2                  T3
+# +------------+      +------------+      +------------+      +------------+      
+# |            |      |            |      |            |      |            |   
+# |            ------->22          |      |            |      |            |   
+# |        2222>====================------>22          |      |            |    
+# |        3333>========================================------>80          |     
+# |            |      |            |      |            |      |            |    
+# +------------+      +------------+      +------------+      +------------+  
+
+# create master connection to t1 and forward tunnel to t2
+ssh -MS /tmp/t1 user@t1 -L 2222:T2:22
+
+# create a master connection to t2 and forward tunnel to t3
+ssh -p 2222 -MS /tmp/t2 user@127.0.0.1 -L 3333:T3:80
+
+# use tunnel to hit T3 web server
+wget http://127.0.0.1:3333
+
+# open another terminal on T2
+ssh -S /tmp/t2 a@1
+```
+
+
 
