@@ -45,19 +45,13 @@
       Vulnerable function executes `RET` instruction,
       reading the address from the stack.
 ```
+## The attack
+1. The Overflow: The attacker sends the crafted payload to the program. The vulnerable function copies the payload into the buffer. Since the payload is larger than the buffer, it overwrites the stack all the way up to and including the return address.
 
-### Step 1: The RET to the Library
+2. The RET Instruction: The vulnerable function finishes its work and executes its RET (return) instruction. The CPU expects to find the original return address on the stack, but instead, it finds the attacker's address: 0xff77aabb.
 
-- When the vulnerable function executes its RET (return) instruction, it pops the address you overwrote (0xff77aabb) off the stack and into the EIP (Instruction Pointer) register.
+3. Jump 1 (To the Library): The EIP register (the Instruction Pointer) is now loaded with 0xff77aabb. The CPU obediently jumps to this address, redirecting execution away from the program's intended path and into the shared library.
 
-- The CPU's execution flow is immediately redirected to that address, which is inside a shared library.
+4. Jump 2 (Back to the Stack): The CPU executes the instruction at 0xff77aabb, which is JMP ESP. This instruction tells the CPU to change EIP again, this time to the address currently held in the stack pointer (ESP). At this moment, ESP is pointing to the memory right after the return address—the start of the NOP sled.
 
-### Step 2: The JMP ESP back to the Stack
-
-- The CPU now executes the instruction at 0xff77aabb, which is JMP ESP.
-
-- This instruction tells the CPU to change EIP again, this time to whatever address the Stack Pointer (ESP) is holding.
-
-- At this exact moment, ESP is pointing to the location on the stack right after the return address—the start of your NOP sled.
-
-- Execution jumps back to your shellcode on the stack, which then runs.
+5. Execution: The CPU's execution flow lands on the NOP sled, slides down the \x90 instructions, and seamlessly runs into the shellcode. The attacker's code now runs with the same privileges as the vulnerable program.
