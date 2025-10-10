@@ -85,9 +85,13 @@ ssh -p 2222 -MS /tmp/t2 user@127.0.0.1 -L 3333:T3:80
 # use tunnel to hit T3 web server
 wget http://127.0.0.1:3333
 
+# open another terminal on T1
+ssh -S /tmp/t1 a@1
+
 # open another terminal on T2
 ssh -S /tmp/t2 a@1
 ```
+
 
 
 
