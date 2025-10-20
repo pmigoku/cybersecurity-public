@@ -5,7 +5,7 @@ set nocompatible
 filetype on
 
 " Enable plugins and load plugin for the detected file type.
-filetype plugin on
+"filetype plugin on
 
 " Load an indent file for the detected file type.
 filetype indent on
@@ -32,7 +32,27 @@ set tabstop=4
 set expandtab
 
 " Do not save backup files.
-set nobackup
+"set nobackup
+
+let s:vim_data_dir = expand('~/.vim')
+let &backupdir = s:vim_data_dir . '/backup//'
+let &directory = s:vim_data_dir . '/swap//'
+let &undodir = s:vim_data_dir . '/undo//'
+
+if !isdirectory(&backupdir)
+    call mkdir(&backupdir, "p")
+endif
+if !isdirectory(&directory)
+    call mkdir(&directory, "p")
+endif
+if !isdirectory(&undodir)
+    call mkdir(&undodir, "p")
+endif
+
+set undofile " Enable persistent undo
+
+
+
 
 " Do not let cursor scroll below or above N number of lines when scrolling.
 set scrolloff=10
@@ -41,15 +61,10 @@ set scrolloff=10
 set wrap
 " set nowrap
 
-" While searching though a file incrementally highlight matching characters as you type.
-set incsearch
-
-" Ignore capital letters during search.
-set ignorecase
-
-" Override the ignorecase option if searching for capital letters.
-" This will allow you to search specifically for capital letters.
-set smartcase
+set ignorecase     " Ignore case in searches
+set smartcase      " Override ignorecase if search contains uppercase letters
+set incsearch      " Incremental search
+set hlsearch       " Highlight search results
 
 " Show partial command you type in the last line of the screen.
 set showcmd
@@ -82,3 +97,8 @@ hi timestamp ctermfg=black ctermbg=yellow
 
 syn match comment '^#.*'
 hi comment ctermfg=green ctermbg=black
+
+
+" Custon status line
+set laststatus=2  " Always display the status line
+set statusline=%f\ %y\ %l/%L\ %c\ %p%%\ %r
