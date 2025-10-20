@@ -13,6 +13,7 @@ set scrolloff=10 " Do not let cursor scroll below or above N number of lines whe
 set laststatus=2  " Always display the status line
 set statusline=%f\ %y\ %l/%L\ %c\ %p%%\ %r "shows file path, type, current line number, number of lines, column num, position in percentage, read only if RO
 set history=1000 " Set the commands to save in history default number is 20.
+set showcmd " Show partial command you type in the last line of the screen.
 
 "====================== Backup Options ========================
 " enable auto backups in ~/.vim and retain undo history after file close!
@@ -41,8 +42,7 @@ set smartcase      " Override ignorecase if search contains uppercase letters
 set incsearch      " Incremental search
 set hlsearch       " Highlight search results
 
-" Show partial command you type in the last line of the screen.
-set showcmd
+
 
 
 " ========== Folding =========
