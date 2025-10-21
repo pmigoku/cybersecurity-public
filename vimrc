@@ -1,4 +1,4 @@
-" ========== Core VIM settings ==========
+" ========== Core VIM settings ==============================================================================================================================
 
 set nocompatible " Disable compatibility with vi which can cause unexpected issues.
 filetype on " Enable type file detection. Vim will be able to try to detect the type of file in use.
@@ -43,15 +43,14 @@ set incsearch      " Incremental search
 set hlsearch       " Highlight search results
 
 
-
-
 " ========== Folding =========
 " Folding: Use marker-based folding, map backslash to toggle fold
 set foldmethod=marker
 nnoremap \ za
 
 
-" ========== Timestamps & Highlighting =========
+
+" ========== Timestamps & Highlighting ===========================================
 
 " Timestamp: Insert current timestamp with F5 (Normal and Insert modes)
 nnoremap <F5> "=strftime("%Y-%m-%d-%H:%M:%S")<CR>PA--<space>
