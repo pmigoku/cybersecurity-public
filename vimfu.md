@@ -32,13 +32,15 @@ View the top 10 lines of your file in the same window.
 - **Windows**: Viewports that display the content of a buffer. You can split your screen into multiple windows to view different parts of a file or different files simultaneously.
 - **Tabs**: Containers for one or more windows. Each tab can have a unique arrangement of windows.
 
-
 ```
-# view buffers
+# Buffers
 :ls
 :buffers
+:bnext
+:bprev
+:buffer n           # Move to (n) buffer
 
-
+# Tabs
 :tabnew file.txt    # Open file.txt in a new tab
 :tabclose           # Close the current tab
 :tabnext            # Go to next tab
