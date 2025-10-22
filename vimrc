@@ -14,7 +14,7 @@ set laststatus=2  " Always display the status line
 set statusline=%f\ %y\ %l/%L\ %c\ %p%%\ %r "shows file path, type, current line number, number of lines, column num, position in percentage, read only if RO
 set history=1000 " Set the commands to save in history default number is 20.
 set showcmd " Show partial command you type in the last line of the screen.
-set mouse=nvi " Enable mouse support accross modes (normal, insert, visual.) If middle-click paste stops working use shift+highlight 
+"set mouse=nvi " Enable mouse support accross modes (normal, insert, visual.) If middle-click paste stops working use shift+highlight 
 
 "====================== Backup Options ========================
 " enable auto backups in ~/.vim and retain undo history after file close!
