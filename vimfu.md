@@ -1,4 +1,4 @@
-#vimfu
+# vimfu
 
 ## nvim - config 
 ```bash
