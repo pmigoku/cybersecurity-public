@@ -1,7 +1,7 @@
 # vimfu
 
 ## Neovim - config 
-Neovim is a modern, highly extensible text editor that is a fork of the popular Vim editor. It retains Vim's core features while improving usability, making it easier to maintain, and enhancing its extensibility through a more modern architecture and better APIs. This allows for advanced user interfaces and a more robust plugin ecosystem, supporting modern languages like Lua for configuration. 
+[Neovim](https://neovim.io/doc/) is a modern, highly extensible text editor that is a fork of the popular Vim editor. It retains Vim's core features while improving usability, making it easier to maintain, and enhancing its extensibility through a more modern architecture and better APIs. This allows for advanced user interfaces and a more robust plugin ecosystem, supporting modern languages like Lua for configuration. 
 
 ```bash
 mkdir $HOME/.config/nvim
