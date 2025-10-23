@@ -65,5 +65,29 @@ hi timestamp ctermfg=black ctermbg=yellow
 syn match comment '^#.*'
 hi comment ctermfg=green ctermbg=black
 
+" ============ Tabs/Buffers ========================================
+" Arrow keys for buffer movement
+
+"noremap <C-S-left> :bp<CR>
+"noremap <C-S-right> :bn<CR>
+"noremap <c-left> :bp!<CR>
+"noremap <c-right> :bn!<CR>
+
+" Switch tab pages with Ctrl + Arrow Keys
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
+" Set the <Leader> key to comma (,)
+" This line must come BEFORE any <Leader> mappings
+let mapleader = ","
+
+
+" ,t  -> new tab
+" ,c  -> close current tab
+" ,o  -> close all OTHER tabs
+nnoremap <Leader>t :tabnew<CR>
+nnoremap <Leader>c :tabclose<CR>
+nnoremap <Leader>o :tabonly<CR>
+
 
 
