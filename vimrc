@@ -1,5 +1,5 @@
 " ========== Core VIM settings ==============================================================================================================================
-
+set mouse=    "disable mouse to allow for middle click paste
 set nocompatible " Disable compatibility with vi which can cause unexpected issues.
 filetype on " Enable type file detection. Vim will be able to try to detect the type of file in use.
 filetype indent on " Load an indent file for the detected file type.
