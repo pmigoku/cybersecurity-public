@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is intented to be used in a Linux DE panel/taskbar to show the current IP addresses
 
 # Get internal IP address
 hostIP="$(hostname -I)"
