@@ -167,3 +167,11 @@ Here is how they display:
 
 > [!CAUTION]
 > Negative potential consequences of an action.
+
+
+
+```bash
+ls -latr 
+```
+
+Edit
