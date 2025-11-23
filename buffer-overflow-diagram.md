@@ -60,8 +60,8 @@ How many stack frames are designed
          THE STACK                                     A SHARED LIBRARY (e.g., libc.so)
 +---------------------------+                         +---------------------------------+
 |      ...                  |                         |         ...                     |
-|      NOP Sled             | <----- (Step 2) ----+   |         (Executable Code)       |
-|      SHELLCODE            |       Jumps here    |   |                                 |
+|      Shellcode            | <----- (Step 2) ----+   |         (Executable Code)       |
+|      NOP Sled             |       Jumps here    |   |                                 |
 +---------------------------+                     |   |                                 |
 | Address of JMP ESP        | ---+                |   |  0xff77aabb:  JMP ESP           |
 |      (0xff77aabb)         |    |                |   |  (The actual instruction lives  |
