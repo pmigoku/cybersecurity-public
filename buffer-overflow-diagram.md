@@ -1,35 +1,3 @@
-## Common Stack Layout
-How many stack frames are designed
-
-    Push elements onto stack -->        TOP OF STACK (Low Mem add)         <-- Pop elements off stack
-                                      +-----------------+
-                                      | Local variables | <---------- Stack pointer (ESP)
-                                      +-----------------+
-                 Current stack frame  | Saved EBP       | <---------- Frame pointer (EBP)
-                                      +-----------------+
-                                      | Return address  |
-                                      +-----------------+
-                                      | Parameters      |
-                                      +-----------------+
-
-                                      +-----------------+
-                                      | Local variables |
-                                      +-----------------+
-                Calling stack frame  | Saved EBP       |
-                                      +-----------------+
-                                      | Return address  |
-                                      +-----------------+
-                                      | Parameters      |
-                                      +-----------------+
-
-                                      +-----------------+
-                     Earlier frames   |                 |        |
-                                      |                 |        | Increasing addresses
-                                      |                 |        V
-                                      +-----------------+
-                                        (High mem add)
-
-
 ## The Stack before a buffer overflow
 ```
  High Memory Addresses 0xfff... (Stack Bottom)
